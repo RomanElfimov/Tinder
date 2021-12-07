@@ -19,6 +19,13 @@
 		E9F04021275E643900BBC069 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F04020275E643900BBC069 /* RoundedImage.swift */; };
 		E9F04024275E65E000BBC069 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E9F04023275E65E000BBC069 /* Kingfisher */; };
 		E9F04027275E74D800BBC069 /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F04026275E74D800BBC069 /* ProfileSwipePromo.swift */; };
+		E9F04029275E8C7D00BBC069 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F04028275E8C7D00BBC069 /* Message.swift */; };
+		E9F0402C275E8D8D00BBC069 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0402B275E8D8D00BBC069 /* Person.swift */; };
+		E9F0402E275E8E7100BBC069 /* MessagePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0402D275E8E7100BBC069 /* MessagePreview.swift */; };
+		E9F04030275E8F0100BBC069 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0402F275E8F0100BBC069 /* MessageView.swift */; };
+		E9F04035275F9E1400BBC069 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F04034275F9E1400BBC069 /* ChatManager.swift */; };
+		E9F04037275FA0B100BBC069 /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F04036275FA0B100BBC069 /* ChatViewHeader.swift */; };
+		E9F04039275FA9BB00BBC069 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F04038275FA9BB00BBC069 /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		E9F0401D275E627D00BBC069 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E9F04020275E643900BBC069 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		E9F04026275E74D800BBC069 /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
+		E9F04028275E8C7D00BBC069 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E9F0402B275E8D8D00BBC069 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E9F0402D275E8E7100BBC069 /* MessagePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreview.swift; sourceTree = "<group>"; };
+		E9F0402F275E8F0100BBC069 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		E9F04034275F9E1400BBC069 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		E9F04036275FA0B100BBC069 /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
+		E9F04038275FA9BB00BBC069 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +84,9 @@
 				E9B9ED6C2759241C008E3914 /* TinderAppApp.swift */,
 				E9B9ED6E2759241C008E3914 /* ContentView.swift */,
 				E9F04017275CD25400BBC069 /* AppStateManager.swift */,
+				E9F0402A275E8C8100BBC069 /* Model */,
 				E9F0401B275CF4A600BBC069 /* MainTabBar */,
+				E9F04031275E8F0400BBC069 /* Messages */,
 				E9F0401F275E628600BBC069 /* Profile */,
 				E9F04025275E681300BBC069 /* HelperView */,
 				E9F0401C275CF4DE00BBC069 /* Extensions */,
@@ -120,6 +136,27 @@
 				E9F04020275E643900BBC069 /* RoundedImage.swift */,
 			);
 			path = HelperView;
+			sourceTree = "<group>";
+		};
+		E9F0402A275E8C8100BBC069 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9F04028275E8C7D00BBC069 /* Message.swift */,
+				E9F0402B275E8D8D00BBC069 /* Person.swift */,
+				E9F0402D275E8E7100BBC069 /* MessagePreview.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9F04031275E8F0400BBC069 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				E9F0402F275E8F0100BBC069 /* MessageView.swift */,
+				E9F04034275F9E1400BBC069 /* ChatManager.swift */,
+				E9F04038275FA9BB00BBC069 /* ChatView.swift */,
+				E9F04036275FA0B100BBC069 /* ChatViewHeader.swift */,
+			);
+			path = Messages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,15 +235,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F04035275F9E1400BBC069 /* ChatManager.swift in Sources */,
 				E9F04016275CCEE000BBC069 /* TabBarButtonView.swift in Sources */,
 				E9F04021275E643900BBC069 /* RoundedImage.swift in Sources */,
+				E9F04037275FA0B100BBC069 /* ChatViewHeader.swift in Sources */,
+				E9F04039275FA9BB00BBC069 /* ChatView.swift in Sources */,
 				E9F0401A275CEEFF00BBC069 /* Extensions.swift in Sources */,
 				E9B9ED6F2759241C008E3914 /* ContentView.swift in Sources */,
+				E9F0402C275E8D8D00BBC069 /* Person.swift in Sources */,
+				E9F04030275E8F0100BBC069 /* MessageView.swift in Sources */,
 				E9F04027275E74D800BBC069 /* ProfileSwipePromo.swift in Sources */,
 				E9F04014275CCCD700BBC069 /* MainView.swift in Sources */,
 				E9B9ED6D2759241C008E3914 /* TinderAppApp.swift in Sources */,
+				E9F04029275E8C7D00BBC069 /* Message.swift in Sources */,
 				E9F0401E275E627D00BBC069 /* ProfileView.swift in Sources */,
 				E9F04018275CD25400BBC069 /* AppStateManager.swift in Sources */,
+				E9F0402E275E8E7100BBC069 /* MessagePreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

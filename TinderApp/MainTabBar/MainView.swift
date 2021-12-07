@@ -21,7 +21,7 @@ struct MainView: View {
             let view = Color.yellow
             return AnyView(view)
         case .message:
-            let view = Text("message")
+            let view = ChatView(person: Person.expample)
             return AnyView(view)
         case .profile:
             let view = ProfileView()
