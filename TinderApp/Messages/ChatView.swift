@@ -35,8 +35,8 @@ struct ChatView: View {
                             ForEach(chatMng.messages.indices, id: \.self) { index in
                                 let msg = chatMng.messages[index]
                                 MessageView(message: msg)
-//                                    .animation(.easeIn)
-//                                    .transition(.move(edge: .trailing))
+                                    .animation(.easeIn)
+                                    .transition(.move(edge: .trailing))
                                     .id(index)
                             }
                         }
@@ -80,8 +80,7 @@ struct ChatView: View {
                 // Video Action
             }
         }
-        .navigationTitle("")
-        .navigationBarHidden(true)
+        .modifier(HideNavigationView())
         .onChange(of: chatMng.keyboardIsShowing) { value in
             if value {
                 // Scroll to the bottom

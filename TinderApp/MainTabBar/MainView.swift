@@ -21,7 +21,7 @@ struct MainView: View {
             let view = Color.yellow
             return AnyView(view)
         case .message:
-            let view = ChatView(person: Person.expample)
+            let view = MessageListView()
             return AnyView(view)
         case .profile:
             let view = ProfileView()
@@ -30,39 +30,42 @@ struct MainView: View {
     }
     
     var body: some View {
-        ZStack {
-            Color(.systemGray6)
-                .opacity(0.35)
-                .edgesIgnoringSafeArea(.vertical)
-            
-            VStack {
-                HStack {
-                    Spacer()
-                    
-                    TabBarButtonView(type: .fire)
+        NavigationView {
+            ZStack {
+                Color(.systemGray6)
+                    .opacity(0.35)
+                    .edgesIgnoringSafeArea(.vertical)
+                
+                VStack {
+                    HStack {
+                        Spacer()
+                        
+                        TabBarButtonView(type: .fire)
 
-                    Spacer()
+                        Spacer()
+                        
+                        TabBarButtonView(type: .star)
+                        
+                        Spacer()
+                        
+                        TabBarButtonView(type: .message)
+                        
+                        Spacer()
+                        
+                        TabBarButtonView(type: .profile)
+                        
+                        Spacer()
+                    }
+                    .frame(height: 100)
+                    .padding(.top, 30)
                     
-                    TabBarButtonView(type: .star)
-                    
-                    Spacer()
-                    
-                    TabBarButtonView(type: .message)
-                    
-                    Spacer()
-                    
-                    TabBarButtonView(type: .profile)
+                    correctViewForState()
                     
                     Spacer()
                 }
-                .frame(height: 100)
-                .padding(.top, 30)
-                
-                correctViewForState()
-                
-                Spacer()
+                .edgesIgnoringSafeArea(.vertical)
             }
-            .edgesIgnoringSafeArea(.vertical)
+            .modifier(HideNavigationView())
         }
     }
 }
