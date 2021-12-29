@@ -11,11 +11,22 @@ import Foundation
 
 struct User {
     var name: String
+    var age: Int
+    var jobTitle: String
+    var imageURLS: [URL] = []
     
     var goldSubscriber: Bool = false
+    var profileTip: String = ""
 }
 
 
 extension User {
-    static let example = User(name: "Alex", goldSubscriber: false)
+    static let example = User(
+        name: "Alex",
+        age: 21,
+        jobTitle: "Software Engineer",
+        imageURLS: [URL(string: "https://picsum.photos/400/310")!],
+        goldSubscriber: true,
+        profileTip: "Photo Tip: Make waves with a beach photo and get more likes"
+        )
 }
